@@ -1,0 +1,20 @@
+/* Phone-first guardrails for the interactive home page. */
+@media (max-width: 900px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  .sc-host *, .sc-host *::before, .sc-host *::after { box-sizing: border-box; }
+  .sc-host [style*="max-width: 1280px"] { width: 100% !important; max-width: 100% !important; min-width: 0 !important; }
+  .sc-host [style*="height: 80px"] { height: 68px !important; padding-left: 16px !important; padding-right: 16px !important; }
+  .sc-host .hero-grid { gap: 28px !important; }
+  .sc-host .hero-grid > *, .sc-host .products-grid > *, .sc-host .categories-grid > *, .sc-host .addons-grid > * { min-width: 0 !important; }
+  .sc-host table { width: 100% !important; max-width: 100% !important; font-size: 11px !important; table-layout: fixed; }
+  .sc-host th, .sc-host td { padding: 10px 7px !important; overflow-wrap: anywhere; }
+  .sc-host img { max-width: 100% !important; height: auto; }
+}
+
+@media (max-width: 560px) {
+  .sc-host [style*="max-width: 1280px"] { padding-left: 20px !important; padding-right: 20px !important; }
+  .sc-host h1 { font-size: clamp(38px, 12vw, 52px) !important; line-height: 1.04 !important; }
+  .sc-host .categories-grid, .sc-host .footer-grid, .sc-host .trust-strip { grid-template-columns: 1fr !important; }
+  .sc-host .sticky-mobile-bar { padding: 9px 12px !important; gap: 8px !important; }
+  .sc-host .sticky-mobile-bar a { padding: 11px 14px !important; }
+}
